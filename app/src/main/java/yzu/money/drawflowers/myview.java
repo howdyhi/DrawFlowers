@@ -24,12 +24,13 @@ public class myview extends View{
 
     public myview(Context context) {
         super(context);
-        Paint p = new Paint();
-        p.setColor(Color.RED);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        //set paint
+        Paint p = new Paint();
+        p.setColor(Color.RED);
     }
 }
