@@ -13,6 +13,7 @@ import android.view.View;
 
 public class myview extends View{
     float x = 0, y = 0;
+    float petalR;//petal's radius
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -29,8 +30,24 @@ public class myview extends View{
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        //set paint
+        //create paint
         Paint p = new Paint();
-        p.setColor(Color.RED);
+        //set petal's radius
+        petalR = 15;
+
+        //draw petals
+        p.setColor(Color.parseColor("#f1b1f9"));//set paint's color
+        canvas.drawCircle(x+35, y, petalR, p); //r
+        canvas.drawCircle(x+25, y+25, petalR, p); //r b
+        canvas.drawCircle(x, y+35, petalR, p); //b
+        canvas.drawCircle(x-25, y+25, petalR, p); //b l
+        canvas.drawCircle(x-35, y, petalR, p); //l
+        canvas.drawCircle(x-25, y-25, petalR, p); //t l
+        canvas.drawCircle(x, y-35, petalR, p);//t
+        canvas.drawCircle(x+25, y-25, petalR, p);// t r
+        //draw mid circle
+        p.setColor(Color.YELLOW);
+        canvas.drawCircle(x, y, 25, p);
+
     }
 }
