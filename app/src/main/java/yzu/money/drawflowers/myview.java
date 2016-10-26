@@ -67,7 +67,7 @@ public class myview extends View{
                 canvas.drawCircle(flowers.get(i).x, flowers.get(i).y-35, petalR, p);//t
                 canvas.drawCircle(flowers.get(i).x+25, flowers.get(i).y-25, petalR, p);// t r
                 //draw mid circle
-                p.setColor(Color.YELLOW);
+                p.setColor(Color.parseColor("#feff97"));
                 canvas.drawCircle(flowers.get(i).x, flowers.get(i).y, 25, p);
             }
 
